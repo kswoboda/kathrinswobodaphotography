@@ -1,0 +1,16 @@
+h2 {
+	color: grey;
+	font-family: fantasy;
+}
+li{
+	padding-bottom:20px;
+	color: grey;
+}
+a, a:hover {
+	color: #A67A1B;
+}
+
+.awards-wrapper{
+	padding-top: 30px;
+	text-align: center;
+}

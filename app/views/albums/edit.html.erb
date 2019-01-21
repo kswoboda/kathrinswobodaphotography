@@ -1,0 +1,15 @@
+<div class="white">
+	<br>
+	<%= link_to albums_path, class: "btn-floating btn-large waves-effect waves-light red" do %>
+	  <i class="material-icons">arrow_back</i>
+	<% end %>
+	
+	<h4>Editing: <%= link_to @album.name, album_path(@album)%> </h4>
+
+	<div class="center">
+		<%= image_tag @album.coverimage.url, height: "200px", class: "materialbox"%>
+	</div>
+
+	<%= render 'form', album: @album %>
+	<br>
+</div>

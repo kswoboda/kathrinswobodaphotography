@@ -1,0 +1,39 @@
+<div class="white"> 
+  <% if notice  %>
+    <div class="collection">
+      <a id="notice" class="collection-item"><span class="badge"></span><%= notice %></a>
+    </div>
+  <% end %>
+
+  <h1>Photos</h1>
+
+  <table cellpadding="10" class="striped">
+    <thead>
+      <tr>
+        <th>Thumbnail</th>
+        <th>Width</th>
+        <th>Album</th>
+        <th>Priority</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @photos.each do |photo| %>
+        <tr>
+          <td><%= image_tag photo.picture.url(:thumb) %></td>
+          <td><%= link_to photo.album.name, controller: "albums", action: "show", id: photo.album_id%></td>
+          <td><%= photo.width %></td>
+          <td><%= photo.priority %></td>
+          <td><%= link_to 'Show', photo %></td>
+          <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
+          <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Photo', new_photo_path %>
+</div>
+

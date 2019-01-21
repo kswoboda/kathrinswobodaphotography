@@ -1,0 +1,40 @@
+<div class="container-fluid cover_container">
+  <div id="myVertNav" class="vertnav collapse">
+    <div data-toggle="collapse" data-target="#myVertNav">
+      <a class="closebtn">&times;</a>
+    </div>
+    <div data-toggle="collapse" data-target="#myVertNav">
+      <a routerLink="/awards">Awards</a>
+    </div>
+    <div data-toggle="collapse" data-target="#myVertNav">
+      <a routerLink="/contact">Contact</a>
+    </div>
+    <div data-toggle="collapse" data-target="#myVertNav">
+      <a routerLink="/galleries">Galleries</a>
+    </div>
+  </div>
+  <div class="center_column col-md-offset-2 col-md-8 col-xs-12 col-sm-12">
+    <div class="title_container">
+      <a routerLink="/"><img class="logo" src="/assets/images/logo.png"></a>
+      <div class="visible-xs-block visible-sm-block ham_container" aria-expanded="false" aria-controls="collapseExample" data-toggle="collapse" data-target="#myVertNav">
+        <a class="glyphicon glyphicon-menu-hamburger hamburger"></a>
+      </div>
+    </div>
+
+    <div class="options_container visible-md-block visible-lg-block visible-xl-block">
+      <ul>
+        <li>
+          <a class="options_text" routerLink="/contact">Contact</a>
+        </li>
+        <li>
+          <a class="options_text" routerLink="/awards">Awards</a>
+        </li>
+        <li>
+          <a id="gal-button" class="options_text" routerLink="/galleries">Galleries</a>
+        </li>
+      </ul>
+    </div>
+    <router-outlet class="col-xs-12"></router-outlet>
+  </div>
+</div>
+

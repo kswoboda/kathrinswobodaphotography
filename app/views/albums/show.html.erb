@@ -1,0 +1,17 @@
+<div class="white">
+	<% if notice  %>
+		<div class="collection">
+		  <a id="notice" class="collection-item"><span class="badge"></span><%= notice %></a>
+		</div>
+	<% end %>
+	<h4><strong><%= @album.name %></strong></h4>
+
+	<%= link_to albums_path, class: "left btn-floating btn-large waves-effect waves-light red" do %>
+		<i class="medium material-icons" >arrow_back</i>
+	<% end %>
+	<%= link_to edit_album_path(@album), class: "right space-left btn-floating btn-large waves-effect waves-light red" do %>
+  		<i class="medium material-icons">edit</i>
+	<% end %>
+
+	<%= render 'photos/index', photos: @photos %>
+</div>

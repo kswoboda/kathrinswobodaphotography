@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Content Management</title>
+
+    <!-- images/favicon -->
+    <%= favicon_link_tag 'favicon.ico' %>
+
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', "data-turbolinks-track" => true %>
+    <%= csrf_meta_tags %>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+
+    
+  </head>
+
+  <body>
+    <div class="container">
+      <%= render "layouts/navbar" %>
+      <%= yield %>
+      <%= render "layouts/footer" %>
+    </div>
+    
+  </body>
+</html>

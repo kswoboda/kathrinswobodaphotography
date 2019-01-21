@@ -1,0 +1,28 @@
+<br>
+<div class="white">
+	<% if notice  %>
+	  <div class="collection">
+	      <a id="notice" class="collection-item"><span class="badge"></span><%= notice %></a>
+	  </div>
+	<% end %>
+
+	<%= link_to album_path(@photo.album_id), class: "btn-floating btn-large waves-effect waves-light red" do %>
+	  <i class="material-icons">arrow_back</i>
+	<% end %>
+	<%= link_to edit_photo_path(@photo), class: "right btn-floating btn-large waves-effect waves-light red" do %>
+	  <i class="material-icons">edit</i>
+	<% end %>
+	<p class="">
+	  <strong>Priority:</strong>
+	  <%= @photo.priority %>
+	</p>
+	<p>
+		<strong>Width:</strong>
+		<%= @photo.width %>
+	</p>
+	<div class="">
+		<%= image_tag @photo.picture.url, height: "200px", class: "materialboxed"%>
+	</div>
+
+</div>
+<br>

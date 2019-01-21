@@ -1,0 +1,50 @@
+<%= form_for @photo, html: { multipart: true } do |form| %>
+  <% if photo.errors.any? %>
+    <div id="error_explanation">
+      <h5><%= pluralize(photo.errors.count, "error") %> prohibited this photo from being saved:</h5>
+
+      <ul>
+      <% photo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field input-field center">
+    <%= form.label :priority %>
+    <%= form.range_field :priority, :min=>1, :max=>30, id: :slider1 %>
+  </div>
+
+  <br>
+
+  <div class="field input-field">
+    <%= form.select(:album_id, Album.all.collect {|a| [ a.name, a.id ] }, { include_blank: true }) %>
+  </div>
+
+  <br>
+
+  <div class="field input-field">
+    <p>Currently: <%= photo.width %></p>
+    <%= form.select :width, options_for_select(["width-small","width-medium", "width-large", "width-xl"]), 
+    :selected => photo.width %>
+  </div>
+
+  <div class="field file-field input-field">
+    <div class="btn">
+      <span>Photo</span>
+       <%= form.file_field :picture %>
+    </div>
+    <div class="file-path-wrapper">
+      <input class="file-path validate" type="text">
+    </div>
+  </div>
+
+  <br>
+
+  <div class="actions">
+    <%= form.submit class: "btn waves-effect waves-light"%>
+  </div>
+
+  <br>
+<% end %>

@@ -1,0 +1,49 @@
+// Place all the styles related to the galleries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.grid-sizer,
+.grid-item {
+	width: 33%;
+}
+.grid-item {
+  float: left;
+}
+
+.grid-item-img {
+  display: block;
+}
+
+
+#back_button {
+	border-radius: 4px;
+	margin-top: 20px;
+	font-size: 30px;
+	color:white;
+	padding-right: 5px;
+	cursor: pointer;
+}
+
+.album_button{
+	margin-top: 30px;
+	background-color: #1a1a1a;
+	border-width: 0;
+	margin: 0 auto;
+}
+
+.album_photo{
+	max-height: 225px;
+	max-width: 225px;
+}
+
+.album_name {
+	color: grey;
+	margin-top: 5px;
+	font-size: 15px;
+	font-family: fantasy;
+	display: block;
+}
+
+.album_grid {
+	text-align: center;
+}

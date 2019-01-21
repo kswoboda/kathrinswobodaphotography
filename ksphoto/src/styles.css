@@ -1,0 +1,372 @@
+body {
+  height: 700px;
+  width: 100%;
+  background-color: black!important;
+}
+.cover_container{
+  background-color: black;
+  padding-bottom: 0;
+}
+
+.center_column {
+  background-color: #1a1a1a;
+  -webkit-transition: width 0.3s ease, margin 0.3s ease;
+  -moz-transition: width 0.3s ease, margin 0.3s ease;
+  -o-transition: width 0.3s ease, margin 0.3s ease;
+  transition: width 0.3s ease, margin 0.3s ease;
+  min-height: 800px!important;
+}
+.title_container{
+	padding-top: 10px;
+	text-align: left;
+}
+.logo {
+  -webkit-transition: all 0.7s ease-out;
+  -moz-transition: all 0.7s ease-out;
+  -ms-transition: all 0.7s ease-out;
+  -o-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+}
+
+@media (min-width:300px)  {
+  .logo {
+    height: 20px!important;
+  }
+}
+@media (min-width:500px)  {
+  .logo {
+    height: 30px!important;
+  }
+}
+@media (min-width:900px)  {
+  .logo {
+    height: 40px!important;
+  }
+}
+
+.options_container{
+	width:100%;
+	height: 30px;
+	padding-top: 3px;
+	padding-bottom: 5px;
+	border-bottom:2px solid #2e2e2e;
+	border-top:2px solid #2e2e2e;
+  color: black;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.options_text{
+	color: grey;
+	font-family: "papyrus",fantasy;
+  font-variant: small-caps;
+	padding-right: 50px;
+	padding-left:50px;
+}
+
+.options_text:focus {
+  color: grey;
+  text-decoration: none;
+}
+
+.options_container li {
+	display: inline;
+}
+
+
+ul{
+	padding-left: 0px;
+}
+
+a:hover{
+  text-decoration:none!important;
+  color: white;
+}
+
+a {
+	transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+}
+
+/*No gradient for left right controls*/
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+}
+
+.glyphicon-chevron-left, .glyphicon-chevron-right {
+	color: grey;
+}
+
+.animated {
+  background-repeat: no-repeat;
+  background-position: left top;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+/*W3 Schools*/
+@-webkit-keyframes fadeInLeft {
+  0% {
+     opacity: 0;
+     -webkit-transform: translate(-0%,-0%);
+  }
+  100% {
+     opacity: 1;
+     -webkit-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+     opacity: 0;
+     transform: translate(-0%,-0%);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+} 
+animation-name: fadeInDown;
+
+.vertnav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align: center;
+}
+
+.vertnav > div > a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: fantasy;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.vertnav {
+  text-align: center;
+}
+
+.closebtn {
+    position: fixed;
+    top: 0;
+    right: 25px;
+    font-size: 36px!important;
+    transition: 0.5s;
+    font-family: "Times New Roman", Georgia, Serif!important;
+    cursor: pointer;
+    color: grey;
+}
+
+@media screen and (max-height: 450px) {
+  .vertnav {padding-top: 15px;}
+  .vertnav a {font-size: 18px;}
+}
+
+
+.hamburger {
+  font-size: 30px;
+  cursor:pointer;
+  color:white;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+
+
+.ham_container {
+  float: right;
+  right:20px;
+  top:16px;
+}
+
+.album_grid{
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding:0;
+	border:0;
+	list-style-type: none;
+	text-align: center;
+}
+
+.album_button{
+	margin-top: 30px;
+	background-color: #1a1a1a;
+	border-width: 0;
+	margin: 0 auto;
+}
+
+.ie {
+	width: 33%;
+	height:auto;
+	display: inline-block;
+}
+
+.album_button:focus {
+	outline:0;
+}
+
+.album_photo{
+	max-height: 225px;
+	max-width: 225px;
+}
+
+.album_button:hover .album_name, 
+.album_button.hover .album_name { 
+	color: white; 
+}
+
+.modal-header{
+	background-color: black;
+	min-height: 0px;
+	padding: 0px;
+	border-bottom: 0px;
+}
+
+.modal-backdrop.in{
+	height: 100%!important;
+	opacity: 1!important;
+}
+.modal-body{
+	background-color: #1a1a1a;
+}
+
+.item img {
+  flex: 1;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.item {
+  height: 500px;
+  width: 100%;
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.album_name {
+	color: grey;
+	margin-top: 5px;
+	font-size: 15px;
+	font-family: fantasy;
+	display: block;
+}
+
+.modal-fullscreen .modal-dialog {
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+.modal-footer{
+	background-color: black;
+	border-color: black;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+}
+
+.close-button {
+	background-color: grey;
+	border-radius: 3px;
+	color: black;
+	float: right;
+}
+
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+    pointer-events:none; /* This makes sure that we can still click outside of the modal to close it */
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+}
+.modal-content {
+    /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+    /* To center horizontally */
+    margin: 0 auto;
+    pointer-events: all;
+}
+
+.grid {
+	padding-top: 20px;
+  margin: 0 auto;
+}
+
+#back_button {
+	border-radius: 4px;
+	margin-top: 20px;
+	font-size: 30px;
+	color:white;
+	padding-right: 5px;
+	cursor: pointer;
+}
+
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-sizer,
+.grid-item {
+	width: calc(33.333% - 20px);
+	margin-bottom: 20px;
+}
+
+.width-small {
+  width: 25%;
+  padding-left: 5.5%;
+}
+.width-large {
+	width: calc(66.666% - 20px);
+}
+.width-xl {
+	width: 100%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item-img {
+  display: block;
+  cursor: pointer;
+}
+
+.carousel-control.left, .carousel-control.right {
+   background-image:none !important;
+   filter:none !important;
+}
+
+

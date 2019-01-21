@@ -1,0 +1,55 @@
+<div class="white">
+  <% if notice  %>
+  <div class="collection">
+      <a id="notice" class="collection-item"><span class="badge"></span><%= notice %></a>
+  </div>
+  <% end %>
+
+  <h4>Albums 
+    
+    <%= link_to new_album_path, class: "right btn-floating btn-large waves-effect waves-light red" do %>
+      <i class="material-icons">add</i>
+    <% end %>
+  </h4>
+
+  
+  
+  <table class="striped">
+    <thead>
+      <tr>
+        <th>Cover Image</th>
+        <th>Name</th>
+        <th> Show </th>
+        <th> Edit </th>
+        <th> Delete </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @albums.each do |album| %>
+        <tr>
+          <td><%= image_tag album.coverimage.url, height: "100px", class: "materialboxed" %></td>
+          <td><%= link_to album.name, album_path(album) %></td>
+
+          <td>
+            <%= link_to album do %>
+              <i class="small material-icons">open_in_browser</i>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to edit_album_path(album) do %>
+              <i class="small material-icons">edit</i>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to album, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <i class="small material-icons">delete_forever</i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+</div>

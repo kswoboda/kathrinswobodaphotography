@@ -1,0 +1,12 @@
+<a id="back_button" class="glyphicon glyphicon-arrow-left hidden" type="button"></a>
+<div class="album_grid">
+	<% @albums.each do |album| %>
+		<button class="album_button" id=<%="a" + album.id.to_s%>>
+			<%= image_tag album.photos.first.picture.url(:medium), id: "album" + album.id.to_s, class: "album_photo materialboxed" %>
+			<p class="album_name"><%= album.name %></p>
+		</button>
+	<%end %>
+</div>
+<div class="grid">
+  <div class="grid-sizer"></div>
+</div>
